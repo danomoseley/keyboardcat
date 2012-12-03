@@ -8,13 +8,13 @@ $(document).ready(function(){
             this.play();
         }
     });
-    $('.danceParty').on('click', '.praful', function(event) {
+    $('body').on('click', '.praful', function(event) {
         event.preventDefault();
         $(this).remove();
     });
     $('html').on('click', function(event) {
         if (!$(event.target).is('.praful')) {
-            $('.danceParty').append($('<img>').addClass('praful').attr('src', 'http://praful.danomoseley.com/ThePraful-Remix3.gif'));
+            $('body').append($('<img>').addClass('praful').css('top',(event.pageY-93)).css('left',(event.pageX-63)).attr('src', 'http://praful.danomoseley.com/ThePraful-Remix3.gif'));
         }
     });
     playlist = [];
