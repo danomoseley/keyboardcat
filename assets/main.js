@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    var i = 0;
     var videos = [{weight:2, sources:['assets/meow.webm', 'assets/meow.m4v']},{weight:10, sources:['assets/Loop.webm', 'assets/Loop.m4v']},{weight:1, sources:['assets/Keyboard_Cat_Redux.webm']}];
     $('video').on('dblclick', function(event){
         if (this.paused == false) {
