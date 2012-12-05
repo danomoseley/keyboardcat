@@ -24,13 +24,13 @@ $(document).ready(function(){
         }
     });
     $('video').on('ended', function(){
-        ++i;
         var random = Math.floor(Math.random() * playlist.length);
         $('video source').remove();
         var video = playlist[random];
         $.each(video, function(i, source) {
-        $('video').append(
-            $("<source>").attr('type','video/'+source.split('.').pop()).attr('src',source)); 
+            $('video').append(
+                $("<source>").attr('type','video/'+source.split('.').pop()).attr('src',source)
+            ); 
         });
         $('video')[0].load();
         current = video;
